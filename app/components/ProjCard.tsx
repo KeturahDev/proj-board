@@ -9,7 +9,7 @@ type ProjCardProp = {
 
 const ProjCard = async ({ title, img, description }: ProjCardProp) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card max-h-72 bg-base-100 shadow-xl">
       <figure>
         <img src={img} alt="Shoes" />
       </figure>
