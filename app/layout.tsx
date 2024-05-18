@@ -16,11 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html data-theme="emerald" lang="en">
+    <html data-theme="acid" lang="en">
       <body className={inter.className}>
-        <main className="m-10 flex flex-col justify-center">
+        <main className=" flex flex-col justify-center">
           <Nav />
-          {children}
+          <div className="m-10">{children}</div>
         </main>
       </body>
     </html>
