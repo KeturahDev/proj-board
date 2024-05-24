@@ -1,7 +1,6 @@
 import React from "react";
 
 type ProjCardProp = {
-  key: number;
   title: string;
   img: string;
   description?: string;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ProjCard from "../components/ProjCard";
-import fakeData from "../util/project";
+import fakeData from "../utils/project";
 
 export default function Home() {
   return (
@@ -9,12 +9,8 @@ export default function Home() {
         const res = await fetch(p.img, { cache: "no-store" });
         const json = await res.json();
         return (
-          <Link href={`/projects/${i}`}>
-            <ProjCard
-              key={i}
-              title={p.title}
-              img={json.errors ? "" : json[0].url}
-            />
+          <Link key={i} href={`/projects/${i}`}>
+            <ProjCard title={p.title} img={json.errors ? "" : json[0].url} />
           </Link>
         );
       })}
