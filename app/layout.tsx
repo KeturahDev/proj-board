@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html data-theme="acid" lang="en">
+    <html data-theme="valentine" lang="en">
       <body className={inter.className}>
         <main className=" flex flex-col justify-center">
           <Nav />
