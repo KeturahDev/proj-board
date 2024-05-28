@@ -1,6 +1,4 @@
 "use server";
-import { pb } from "@/app/utils/pocketbase";
-import { cookies } from "next/headers";
 
 interface signupProps {
   username: string;
@@ -27,20 +25,5 @@ export default async function signup({
     passwordConfirm,
     name: fullName,
   };
-
-  console.log("pb", pb);
-  const record = await pb.collection("users").create(data);
-  console.log("pb.collection(users)", pb.collection("users"));
-  const authData = await pb
-    .collection("users")
-    .authWithPassword(email, password);
-
-  cookies().set("token", pb.authStore.token ?? "", {
-    secure: true,
-  });
-  cookies().set("user", JSON.stringify(pb.authStore.model), {
-    secure: true,
-  });
-
-  return { record, authData };
+  console.log(data);
 }
