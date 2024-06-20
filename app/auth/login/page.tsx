@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import loginAction from "./action";
+import Image from "next/image";
 
 function Login() {
   const router = useRouter();
@@ -35,7 +36,7 @@ function Login() {
   return (
     <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0 text-black">
       <div className="md:w-1/3 max-w-sm">
-        <img
+        <Image
           src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
           alt="Sample image"
         />

@@ -25,5 +25,4 @@ export default async function signup({
     passwordConfirm,
     name: fullName,
   };
-  console.log(data);
 }
